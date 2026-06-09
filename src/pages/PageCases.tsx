@@ -245,11 +245,11 @@ export default function PageCases() {
         <p className="text-slate-400 text-sm">Historia clínica, hallazgos de imagen y diagnóstico dirigido. Intenta llegar al diagnóstico antes de revelar la respuesta.</p>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex flex-col gap-6 lg:flex-row">
         {/* Case list */}
-        <div className="w-60 shrink-0">
+        <div className="w-full shrink-0 lg:w-60">
           <div className="text-xs uppercase tracking-widest text-slate-500 font-mono mb-3">Casos ({cases.length})</div>
-          <div className="space-y-2">
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:block lg:space-y-2">
             {cases.map((cas) => (
               <button
                 key={cas.id}

@@ -1,124 +1,132 @@
+import { Activity, ArrowRight, Bone, BookOpenCheck, ScanLine, Stethoscope } from "lucide-react";
 import { type Page } from "../App";
 
 const cards = [
   {
     page: "modalities" as Page,
-    icon: "🔬",
-    title: "Modalidades de Imagen",
-    desc: "Radiografía convencional, Tomografía Computada, Resonancia Magnética y Ecografía musculoesquelética.",
-    color: "border-blue-700/50 hover:border-blue-500",
+    icon: ScanLine,
+    title: "Modalidades de imagen",
+    desc: "Radiografía, tomografía, resonancia magnética y ecografía aplicadas al sistema musculoesquelético.",
     badge: "4 técnicas",
   },
   {
     page: "anatomy" as Page,
-    icon: "🦴",
-    title: "Anatomía por Región",
-    desc: "Columna vertebral, hombro, codo, muñeca, cadera, rodilla y tobillo/pie.",
-    color: "border-cyan-700/50 hover:border-cyan-500",
+    icon: Bone,
+    title: "Anatomía regional",
+    desc: "Consulta estructurada por articulación y región anatómica, desde columna hasta pie y tobillo.",
     badge: "7 regiones",
   },
   {
     page: "pathology" as Page,
-    icon: "🩺",
-    title: "Hallazgos Patológicos",
-    desc: "Fracturas, luxaciones, patología degenerativa, tumoral e inflamatoria.",
-    color: "border-teal-700/50 hover:border-teal-500",
+    icon: Stethoscope,
+    title: "Hallazgos patológicos",
+    desc: "Patrones útiles para trauma, enfermedad degenerativa, inflamación, infección y tumores.",
     badge: "6 categorías",
   },
   {
     page: "cases" as Page,
-    icon: "📋",
-    title: "Casos Clínicos",
-    desc: "Ejercicios de interpretación con historia clínica, imágenes y diagnóstico guiado.",
-    color: "border-indigo-700/50 hover:border-indigo-500",
+    icon: BookOpenCheck,
+    title: "Casos clínicos",
+    desc: "Ejercicios de razonamiento con contexto clínico, hallazgos y diagnóstico guiado.",
     badge: "8 casos",
   },
 ];
 
 const highlights = [
-  { label: "Radiografía", detail: "Primera línea diagnóstica" },
-  { label: "TC Multicorte", detail: "Detalle óseo superior" },
-  { label: "RM", detail: "Tejidos blandos" },
-  { label: "Ecografía", detail: "Dinámica y en tiempo real" },
+  { label: "Radiografía", detail: "Evaluación inicial" },
+  { label: "Tomografía", detail: "Arquitectura ósea" },
+  { label: "Resonancia", detail: "Tejidos blandos" },
+  { label: "Ecografía", detail: "Estudio dinámico" },
 ];
 
-interface Props { setPage: (p: Page) => void }
+interface Props {
+  setPage: (page: Page) => void;
+}
 
 export default function PageHome({ setPage }: Props) {
   return (
-    <div className="min-h-full">
-      {/* Hero */}
-      <div className="relative bg-gradient-to-br from-[#0d1f35] via-[#0d1117] to-[#0a1628] px-10 py-16 border-b border-slate-800">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-1 h-10 bg-cyan-500 rounded-full" />
-            <span className="text-cyan-400 text-sm tracking-widest uppercase font-mono">Sistema Musculoesquelético</span>
-          </div>
-          <h1 className="text-4xl font-bold text-white leading-tight mb-3" style={{ fontFamily: "Georgia, serif" }}>
-            Radiología e Imagenología MSK
-          </h1>
-          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl">
-            Guía de referencia estructurada para el estudio y diagnóstico por imágenes del aparato locomotor.
-            Modalidades, anatomía regional, hallazgos patológicos y casos clínicos integrados.
+    <div className="home-page">
+      <section className="home-hero">
+        <div className="hero-grid" />
+        <div className="hero-content">
+          <p className="eyebrow">Sociedad médica especializada · Nuevo León</p>
+          <h1>Imagen musculoesquelética con rigor, claridad y comunidad.</h1>
+          <p className="hero-copy">
+            Un espacio para el aprendizaje continuo, la colaboración profesional y la
+            difusión de la radiología musculoesquelética en el noreste de México.
           </p>
-
-          {/* Modality pills */}
-          <div className="flex flex-wrap gap-3 mt-8">
-            {highlights.map((h) => (
-              <div key={h.label} className="flex items-center gap-2 bg-slate-800/60 border border-slate-700 rounded-full px-4 py-2">
-                <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                <span className="text-slate-200 text-sm font-semibold">{h.label}</span>
-                <span className="text-slate-500 text-xs">— {h.detail}</span>
-              </div>
-            ))}
+          <div className="hero-actions">
+            <button className="primary-cta" onClick={() => setPage("cases")}>
+              Explorar casos clínicos <ArrowRight size={18} />
+            </button>
+            <button className="secondary-cta" onClick={() => setPage("modalities")}>
+              Ver modalidades
+            </button>
           </div>
         </div>
 
-        {/* Decorative skeleton icon */}
-        <div className="absolute right-12 top-12 text-8xl opacity-5 select-none">🦴</div>
-      </div>
+        <div className="hero-visual" aria-hidden="true">
+          <div className="scan-orbit orbit-one" />
+          <div className="scan-orbit orbit-two" />
+          <div className="scan-core">
+            <Activity size={58} strokeWidth={1.25} />
+          </div>
+          <span className="scan-label label-rm">RM</span>
+          <span className="scan-label label-tc">TC</span>
+          <span className="scan-label label-us">US</span>
+        </div>
+      </section>
 
-      {/* Cards grid */}
-      <div className="p-10">
-        <h2 className="text-slate-400 text-xs tracking-widest uppercase mb-6 font-mono">Secciones principales</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {cards.map((c) => (
-            <button
-              key={c.page}
-              onClick={() => setPage(c.page)}
-              className={`text-left p-6 rounded-xl border bg-slate-900/40 transition-all duration-200 group ${c.color}`}
-            >
-              <div className="flex items-start justify-between mb-3">
-                <span className="text-3xl">{c.icon}</span>
-                <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded-full font-mono">{c.badge}</span>
+      <section className="modality-strip">
+        {highlights.map((item) => (
+          <div key={item.label} className="modality-item">
+            <span />
+            <div>
+              <strong>{item.label}</strong>
+              <small>{item.detail}</small>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section className="home-content">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Biblioteca educativa</p>
+            <h2>Conocimiento organizado para la práctica diaria</h2>
+          </div>
+          <p>
+            Contenido diseñado para residentes, radiólogos y profesionales interesados
+            en el diagnóstico por imagen del aparato locomotor.
+          </p>
+        </div>
+
+        <div className="feature-grid">
+          {cards.map(({ page, icon: Icon, title, desc, badge }) => (
+            <button key={page} className="feature-card" onClick={() => setPage(page)}>
+              <div className="feature-card-top">
+                <span className="feature-icon"><Icon size={24} /></span>
+                <span className="feature-badge">{badge}</span>
               </div>
-              <h3 className="text-white font-bold text-lg mb-2 group-hover:text-cyan-300 transition-colors">
-                {c.title}
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{c.desc}</p>
-              <div className="mt-4 text-cyan-500 text-sm font-mono group-hover:translate-x-1 transition-transform inline-block">
-                Ver sección →
-              </div>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+              <span className="feature-link">Abrir sección <ArrowRight size={16} /></span>
             </button>
           ))}
         </div>
 
-        {/* Info box */}
-        <div className="mt-8 p-5 bg-slate-900/60 border border-slate-800 rounded-xl">
-          <div className="flex gap-3 items-start">
-            <span className="text-2xl mt-0.5">💡</span>
-            <div>
-              <div className="text-slate-200 font-semibold mb-1">Uso recomendado</div>
-              <div className="text-slate-400 text-sm leading-relaxed">
-                Navega por <strong className="text-slate-300">Modalidades</strong> para entender las técnicas,
-                luego revisa <strong className="text-slate-300">Anatomía Regional</strong> por zona de interés,
-                consulta <strong className="text-slate-300">Hallazgos Patológicos</strong> como referencia diagnóstica
-                y practica con <strong className="text-slate-300">Casos Clínicos</strong>.
-              </div>
-            </div>
+        <div className="mission-panel">
+          <div className="mission-number">01</div>
+          <div>
+            <p className="eyebrow">Nuestra misión</p>
+            <h2>Impulsar la excelencia en imagen musculoesquelética.</h2>
           </div>
+          <p>
+            Promovemos educación médica continua, intercambio académico y recursos
+            prácticos para fortalecer la atención de los pacientes.
+          </p>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

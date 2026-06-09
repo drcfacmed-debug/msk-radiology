@@ -1,75 +1,77 @@
+import {
+  Activity,
+  BookOpen,
+  ChevronLeft,
+  ChevronRight,
+  FileSearch,
+  House,
+  ScanLine,
+} from "lucide-react";
 import { type Page } from "../App";
 
-const navItems: { id: Page; label: string; icon: string; sub?: string }[] = [
-  { id: "home", label: "Inicio", icon: "🏠" },
-  { id: "modalities", label: "Modalidades", icon: "🔬", sub: "RX · TC · RM · ECO" },
-  { id: "anatomy", label: "Anatomía Regional", icon: "🦴", sub: "Columna · Hombro · Rodilla…" },
-  { id: "pathology", label: "Hallazgos Patológicos", icon: "🩺", sub: "Fracturas · Tumores · Inflamación" },
-  { id: "cases", label: "Casos Clínicos", icon: "📋", sub: "Ejercicios con diagnóstico" },
+const navItems = [
+  { id: "home" as Page, label: "Inicio", icon: House },
+  { id: "modalities" as Page, label: "Modalidades", icon: ScanLine, sub: "RX · TC · RM · ECO" },
+  { id: "anatomy" as Page, label: "Anatomía Regional", icon: Activity, sub: "Columna · Hombro · Rodilla" },
+  { id: "pathology" as Page, label: "Hallazgos", icon: FileSearch, sub: "Patología y diagnóstico" },
+  { id: "cases" as Page, label: "Casos Clínicos", icon: BookOpen, sub: "Aprendizaje aplicado" },
 ];
 
 interface Props {
   page: Page;
-  setPage: (p: Page) => void;
+  setPage: (page: Page) => void;
   open: boolean;
-  setOpen: (o: boolean) => void;
+  setOpen: (open: boolean) => void;
 }
 
 export default function Sidebar({ page, setPage, open, setOpen }: Props) {
   return (
-    <aside
-      className="flex flex-col bg-[#0a0f1a] border-r border-slate-800 transition-all duration-300"
-      style={{ width: open ? 260 : 64 }}
-    >
-      {/* Header */}
-      <div className="flex items-center justify-between px-4 py-5 border-b border-slate-800">
+    <aside className={`sidebar ${open ? "open" : ""}`} style={{ width: open ? 280 : 76 }}>
+      <div className="sidebar-brand">
         {open && (
-          <div>
-            <div className="text-cyan-400 font-bold text-sm tracking-widest uppercase">MSK</div>
-            <div className="text-slate-300 text-xs mt-0.5">Radiología & Imagen</div>
+          <div className="brand-lockup">
+            <div className="brand-mark">SR</div>
+            <div>
+              <div className="brand-acronym">SRIMSKNL</div>
+              <div className="brand-subtitle">Imagen musculoesquelética</div>
+            </div>
           </div>
         )}
         <button
           onClick={() => setOpen(!open)}
-          className="text-slate-400 hover:text-cyan-400 transition-colors ml-auto"
-          aria-label="Toggle sidebar"
+          className="sidebar-toggle"
+          aria-label="Abrir o cerrar navegación"
         >
-          {open ? "◀" : "▶"}
+          {open ? <ChevronLeft size={18} /> : <ChevronRight size={18} />}
         </button>
       </div>
 
-      {/* Nav */}
-      <nav className="flex-1 py-4 space-y-1 px-2">
+      <nav className="sidebar-nav">
         {navItems.map((item) => (
           <button
             key={item.id}
-            onClick={() => setPage(item.id)}
-            className={`w-full flex items-start gap-3 px-3 py-3 rounded-lg text-left transition-all group
-              ${page === item.id
-                ? "bg-cyan-950 border border-cyan-700/50 text-cyan-300"
-                : "text-slate-400 hover:bg-slate-800 hover:text-slate-100"
-              }`}
+            onClick={() => {
+              setPage(item.id);
+              if (window.innerWidth <= 560) setOpen(false);
+            }}
+            className={`nav-item ${page === item.id ? "active" : ""}`}
+            title={!open ? item.label : undefined}
           >
-            <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
+            <item.icon size={20} className="nav-icon" />
             {open && (
-              <div className="min-w-0">
-                <div className="font-semibold text-sm leading-tight">{item.label}</div>
-                {item.sub && (
-                  <div className="text-xs text-slate-500 mt-0.5 truncate">{item.sub}</div>
-                )}
+              <div className="nav-copy">
+                <div className="nav-label">{item.label}</div>
+                {item.sub && <div className="nav-subtitle">{item.sub}</div>}
               </div>
             )}
           </button>
         ))}
       </nav>
 
-      {/* Footer */}
       {open && (
-        <div className="px-4 py-4 border-t border-slate-800">
-          <div className="text-xs text-slate-600 leading-relaxed">
-            Referencia educativa en<br />
-            imagenología MSK
-          </div>
+        <div className="sidebar-footer">
+          <span className="status-dot" />
+          Educación · Ciencia · Comunidad
         </div>
       )}
     </aside>

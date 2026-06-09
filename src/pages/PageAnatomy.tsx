@@ -122,11 +122,11 @@ export default function PageAnatomy() {
         <p className="text-slate-400 text-sm">Estructuras clave y características por modalidad en cada región del aparato locomotor</p>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex flex-col gap-6 lg:flex-row">
         {/* Region list */}
-        <div className="w-52 shrink-0">
+        <div className="w-full shrink-0 lg:w-52">
           <div className="text-xs uppercase tracking-widest text-slate-500 font-mono mb-3">Región</div>
-          <div className="space-y-1">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:block lg:space-y-1">
             {regions.map((r) => (
               <button
                 key={r.id}
