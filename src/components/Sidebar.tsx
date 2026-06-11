@@ -5,6 +5,7 @@ import {
   ChevronRight,
   FileSearch,
   House,
+  LifeBuoy,
   ScanLine,
 } from "lucide-react";
 import { type Page } from "../App";
@@ -15,6 +16,7 @@ const navItems = [
   { id: "anatomy" as Page, label: "Anatomía Regional", icon: Activity, sub: "Columna · Hombro · Rodilla" },
   { id: "pathology" as Page, label: "Hallazgos", icon: FileSearch, sub: "Patología y diagnóstico" },
   { id: "cases" as Page, label: "Casos Clínicos", icon: BookOpen, sub: "Aprendizaje aplicado" },
+  { id: "support" as Page, label: "Soporte Técnico", icon: LifeBuoy, sub: "Tickets · IA" },
 ];
 
 interface Props {

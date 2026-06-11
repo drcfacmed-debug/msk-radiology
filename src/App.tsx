@@ -7,8 +7,9 @@ import PageModalities from "./pages/PageModalities";
 import PageAnatomy from "./pages/PageAnatomy";
 import PagePathology from "./pages/PagePathology";
 import PageCases from "./pages/PageCases";
+import PageSupport from "./pages/PageSupport";
 
-export type Page = "home" | "modalities" | "anatomy" | "pathology" | "cases";
+export type Page = "home" | "modalities" | "anatomy" | "pathology" | "cases" | "support";
 
 function App() {
   const [page, setPage] = useState<Page>("home");
@@ -60,6 +61,7 @@ function App() {
           {page === "anatomy" && <PageAnatomy />}
           {page === "pathology" && <PagePathology />}
           {page === "cases" && <PageCases />}
+          {page === "support" && <PageSupport />}
         </main>
       </div>
       <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
