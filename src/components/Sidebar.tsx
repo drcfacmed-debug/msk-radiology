@@ -4,6 +4,7 @@ import {
   ChevronLeft,
   ChevronRight,
   FileSearch,
+  FileText,
   House,
   LifeBuoy,
   ScanLine,
@@ -17,6 +18,7 @@ const navItems = [
   { id: "pathology" as Page, label: "Hallazgos", icon: FileSearch, sub: "Patología y diagnóstico" },
   { id: "cases" as Page, label: "Casos Clínicos", icon: BookOpen, sub: "Aprendizaje aplicado" },
   { id: "support" as Page, label: "Soporte Técnico", icon: LifeBuoy, sub: "Tickets · IA" },
+  { id: "radreport" as Page, label: "RadReport Pro", icon: FileText, sub: "Generar · Validar · Dx" },
 ];
 
 interface Props {

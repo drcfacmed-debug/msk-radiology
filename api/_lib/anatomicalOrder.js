@@ -1,0 +1,181 @@
+export const ANATOMICAL_ORDER = {
+
+  rodilla: [
+    "Meniscos (medial y lateral: cuernos anterior, posterior y cuerpo; extrusión, morfología, señal)",
+    "Ligamentos cruzados (LCA y LCP: dirección, tensión, continuidad fibrilar, señal)",
+    "Ligamentos colaterales (LCM y LCL: inserción proximal, distal, continuidad)",
+    "Resto de ligamentos (ligamento poplíteo oblicuo, ligamento poplíteo arqueado, ligamento meniscopoplíteo, LCF si aplica)",
+    "Tendones (cuádriceps y patelar: continuidad, grosor, señal; tendones del compartimento posterior si aplica)",
+    "Patela (morfología, alineación, cartílago patelar por facetas, relación troclear)",
+    "Músculos (isquiotibiales, cuádriceps, gastrocnemios: señal, morfología, lesiones)",
+    "Estructuras óseas (fémur distal, tibia proximal, peroné proximal: señal medular, trabéculas, contorno articular, presencia de edema óseo, fracturas ocultas, lesiones)",
+    "Tejidos blandos y estructuras articulares (cartílago articular por compartimentos: medial, lateral, femoropatelar; derrame articular, bursas, quiste de Baker, cuerpos libres, sinovial)",
+  ],
+
+  hombro: [
+    "Manguito rotador (supraespinoso, infraespinoso, subescapular, redondo menor: grosor, señal, continuidad, sitio de desgarro si aplica, clasificación Ellman/Bateman)",
+    "Tendón de la cabeza larga del bíceps (trayecto intertubercular, anclaje en labrum superior, señal, posición, luxación)",
+    "Labrum glenoideo (anterior, posterior, superior: morfología, señal, lesiones tipo Bankart, SLAP)",
+    "Ligamentos glenohumerales (superior, medio, inferior: continuidad, señal)",
+    "Ligamento coracoacromial y espacio subacromial (amplitud, bursitis subacromial-subdeltoidea)",
+    "Articulación acromioclavicular (espacio articular, morfología acromial, osteofitos, tipo de acromion)",
+    "Tendones (deltoides, pectoral mayor si aplica)",
+    "Músculos del manguito y cintura escapular (atrofia, infiltración grasa, señal)",
+    "Estructuras óseas (húmero proximal: cabeza, troquíter, troquín; glenoide; acromion; clavícula distal: señal medular, contorno, lesiones)",
+    "Tejidos blandos y estructuras articulares (cartílago glenohumeral, derrame articular, cuerpos libres, sinovial, quistes paralabiales)",
+  ],
+
+  cadera: [
+    "Labrum acetabular (anterior, superior, posterior: morfología, señal, desgarros, clasificación)",
+    "Ligamentos (ligamento redondo, ligamento iliofemoral, isquiofemoral, pubofemoral: continuidad, señal)",
+    "Tendones (iliopsoas, glúteo medio, glúteo menor, recto femoral, isquiotibiales proximales: inserción, grosor, señal, desgarros)",
+    "Músculos (glúteos, iliopsoas, pelvi-trocantéreos, aductores: señal, atrofia, contusiones, desgarros)",
+    "Estructuras óseas (cabeza femoral: esfericidad, señal, necrosis avascular por estadio Ficat; cuello femoral; acetábulo: profundidad, ángulo, contorno; morfología en cam/pincer)",
+    "Tejidos blandos y estructuras articulares (cartílago articular, derrame, bursas: trocantérea, iliopectínea, isquioglútea; cuerpos libres, sinovial, quiste paralabial)",
+  ],
+
+  tobillo_pie: [
+    "Ligamentos del compartimento lateral (peroneo-astragalino anterior LPAA, peroneo-calcáneo LPC, peroneo-astragalino posterior LPAP: continuidad, señal, engrosamiento)",
+    "Ligamento deltoideo (fascículos tibioastragalino, tibiocalcáneo, tibionavicular: continuidad, señal)",
+    "Ligamentos del seno del tarso y ligamento en Y (bifurcado)",
+    "Ligamentos del compartimento anterior y sindesmosis tibioperonea (anterior, posterior, membrana interósea)",
+    "Tendones del compartimento posterior (Aquiles: grosor, señal, continuidad, entesofito; tibial posterior; flexor largo del dedo gordo; flexor común de los dedos)",
+    "Tendones del compartimento lateral (peroneo largo y corto: trayecto, morfología, luxación, desgarros longitudinales)",
+    "Tendones del compartimento anterior (tibial anterior, extensor largo del dedo gordo, extensor común)",
+    "Músculos (intrínsecos del pie, compartimentos de la pierna distal: señal, contorno)",
+    "Estructuras óseas (tibia distal, peroné distal, astrágalo, calcáneo, navicular, cuboides, cuñas, metatarsianos, falanges: señal medular, contorno, lesiones, fracturas por estrés, edema óseo)",
+    "Tejidos blandos y estructuras articulares (cartílago articular tibioastragalino, derrame articular, bursas, fascia plantar, plantar fibromatosis, neuroma de Morton si aplica, sinovial)",
+  ],
+
+  columna_cervical: [
+    "Médula espinal y cono medular (calibre, señal, contorno, presencia de mielopatía)",
+    "Discos intervertebrales (por nivel C2-C3 a C7-T1: altura, hidratación, tipo de hernia según clasificación de Michigan: protrusión, extrusión, secuestro; orientación: central, paracentral, foraminal, extraforaminal)",
+    "Complejo ligamentario posterior (ligamento longitudinal posterior, ligamento amarillo, ligamento interespinoso, cápsulas facetarias)",
+    "Ligamento longitudinal anterior",
+    "Forámenes de conjunción (permeabilidad bilateral por nivel, compromiso radicular)",
+    "Canal espinal (diámetro anteroposterior, área seccional, compromiso central, clasificación de estenosis)",
+    "Articulaciones (facetas articulares: artrosis, hipertrofia; articulaciones uncovertebrales: osteofitos, estenosis foraminal)",
+    "Estructuras óseas (cuerpos vertebrales: altura, alineación, señal medular, plataformas, osteofitos; arcos posteriores; apófisis espinosas y transversas)",
+    "Tejidos blandos paravertebrales (musculatura cervical: señal, atrofia; partes blandas prevertebral)",
+  ],
+
+  columna_toracica: [
+    "Médula espinal (calibre, señal, contorno, lesiones intramedulares)",
+    "Discos intervertebrales (por nivel T1-T2 a T12-L1: altura, hidratación, tipo y orientación de hernia)",
+    "Complejo ligamentario posterior (LLP, ligamento amarillo, interespinoso, cápsulas facetarias)",
+    "Ligamento longitudinal anterior",
+    "Canal espinal (diámetro, compromiso, estenosis)",
+    "Articulaciones (facetas articulares: artrosis, efusión; articulaciones costovertebrales y costotransversas)",
+    "Estructuras óseas (cuerpos vertebrales: alineación, altura, señal medular, fracturas, lesiones focales; costillas: continuidad, lesiones; esternón si aplica)",
+    "Tejidos blandos paravertebrales (musculatura torácica; hallazgos en mediastino posterior o pleura si son visibles y relevantes)",
+  ],
+
+  columna_lumbar: [
+    "Médula espinal y cono medular (nivel de terminación, señal, filum terminal)",
+    "Cola de caballo y raíces nerviosas (morfología, señal, realce si aplica)",
+    "Discos intervertebrales (por nivel L1-L2 a L5-S1: altura, hidratación, tipo de hernia según clasificación de Michigan; orientación: central, paracentral, foraminal, extraforaminal; contacto o compresión radicular)",
+    "Complejo ligamentario posterior (LLP, ligamento amarillo: grosor, señal; ligamento interespinoso, cápsulas facetarias)",
+    "Ligamento longitudinal anterior",
+    "Forámenes de conjunción (permeabilidad bilateral por nivel, compresión radicular)",
+    "Canal espinal (diámetro anteroposterior, área seccional, grado de estenosis central por clasificación de Schizas o Landman)",
+    "Articulaciones (facetas articulares: artrosis, hipertrofia, efusión, quiste sinovial; articulaciones sacroiliacas si aplica)",
+    "Estructuras óseas (cuerpos vertebrales: alineación, listesis por grado Meyerding, altura, señal medular, plataformas, osteofitos; arcos posteriores; apófisis espinosas)",
+    "Tejidos blandos paravertebrales (musculatura lumbar: señal, infiltración grasa, atrofia por nivel; hallazgos retroperitoneales visibles si son relevantes)",
+  ],
+
+  muneca_mano: [
+    "Ligamentos intrínsecos del carpo (escafolunar: bandas volar, proximal/membrana, dorsal; lunopiramidal; clasificación de desgarro parcial vs completo)",
+    "Complejo fibrocartilaginoso triangular CFCT (disco articular, ligamentos radioulnares volar y dorsal, menisco homólogo, extensores cubital del carpo; clasificación Palmer)",
+    "Ligamentos extrínsecos (radioescafoide, radiolunar largo y corto, cubito-piramidal, radiotriquetral dorsal)",
+    "Tendones del compartimento extensor (6 compartimentos: abductor largo y extensor corto del pulgar, ERRC, ERLC, ELP, ECD, EDM, ECU)",
+    "Tendones del compartimento flexor (FRC, palmar mayor, FLP, FSD, FPD, FCU en canal de Guyon)",
+    "Músculos intrínsecos (tenares, hipotenares, interóseos, lumbricales: señal, morfología)",
+    "Estructuras óseas (radio distal, ulna distal, escafoides, semilunar, piramidal, pisiforme, trapecio, trapezoide, grande, ganchoso, metacarpianos, falanges: señal medular, contorno, fracturas ocultas, lesiones)",
+    "Tejidos blandos y estructuras articulares (cartílago articular radio-escafo-semilunar, articulación radioulnar distal, mediocarpiana, carpometacarpiana; derrame, bursas, ganglión, cuerpos libres, sinovial, nervio mediano en canal carpiano: calibre, señal)",
+  ],
+
+  codo: [
+    "Ligamento colateral medial (fascículo anterior oblicuo, posterior, transverso: continuidad, señal, clasificación de lesión)",
+    "Ligamento colateral lateral (LCL radial, LCL ulnar LCLU, anular, accesorio lateral: continuidad, señal)",
+    "Tendón distal del bíceps (inserción en tuberosidad radial: grosor, señal, continuidad, bursitis bicipitoradial)",
+    "Tendón del tríceps (inserción en olécranon: grosor, señal, continuidad)",
+    "Tendones del epicóndilo lateral (extensor radial corto del carpo ERCC, extensor común de dedos ECD: inserción, grosor, señal; epicondilitis lateral)",
+    "Tendones del epicóndilo medial (pronador redondo, flexor radial del carpo, palmar largo, flexor superficial; epicondilitis medial)",
+    "Nervio ulnar (trayecto en canal cubitotroclear: calibre, señal, compresión)",
+    "Músculos (braquial, braquiorradial, extensores y flexores del antebrazo: señal, morfología)",
+    "Estructuras óseas (húmero distal: tróclea, cóndilo, epicóndilos; radio proximal: cabeza, cuello; ulna: olécranon, apófisis coronoides; señal medular, contorno, lesiones, osteocondritis disecante)",
+    "Tejidos blandos y estructuras articulares (cartílago articular humerorradial y humeroulnar, derrame articular, bursas: olecraneana, bicipitoradial; cuerpos libres, sinovial, fosa olecraneana)",
+  ],
+
+  pelvis_sacroiliacas: [
+    "Articulaciones sacroiliacas (porciones cartilaginosa e interósea: señal, erosiones, esclerosis, ankylosis; grado de sacroileítis por clasificación de Nueva York modificada o ASAS; edema óseo periarticular)",
+    "Sínfisis púbica (señal del fibrocartílago, ancho del espacio, osteítis púbica, erosiones, edema)",
+    "Tendones e inserciones (isquiotibiales proximales en tuberosidad isquiática; glúteos en trocánter mayor; iliopsoas en trocánter menor; recto femoral en espina ilíaca anteroinferior; aductores en rama isquiopúbica)",
+    "Músculos (glúteos mayor, medio y menor; iliopsoas; obturadores; piriforme; cuadrado femoral; aductores: señal, morfología, lesiones)",
+    "Estructuras óseas (ilion, isquion, pubis, sacro, cóccix, acetábulo: señal medular, contorno articular, lesiones focales, fracturas por insuficiencia)",
+    "Tejidos blandos y estructuras articulares (bursas trocantéreas, iliopectínea; nervio ciático: trayecto y calibre; vasos ilíacos si son visibles; ganglios linfáticos si son relevantes)",
+  ],
+
+  pie: [
+    "Ligamentos (peroneo-astragalino anterior LPAA, peroneo-calcáneo LPC; ligamento en Y: calcáneo-navicular y calcáneo-cuboides; ligamentos tarso-metatarsianos de Lisfranc)",
+    "Tendones del compartimento posterior distal (Aquiles: inserción calcánea, señal, grosor; tibial posterior: inserción navicular, continuidad; flexor largo del dedo gordo; flexor común)",
+    "Tendones del compartimento lateral (peroneo largo y corto: surco peroneal, inserción, desgarros longitudinales)",
+    "Tendones del compartimento anterior (tibial anterior, extensor largo del dedo gordo, extensores comunes)",
+    "Fascia plantar (grosor en inserción calcánea, señal, desgarros, fibromatosis plantar)",
+    "Músculos intrínsecos del pie (abductor del dedo gordo, flexor corto plantar, interóseos: señal, atrofia)",
+    "Estructuras óseas (calcáneo: señal, fracturas por estrés, espolón; astrágalo; navicular; cuboides; cuñas; metatarsianos; falanges: señal medular, contorno, lesiones, fracturas por estrés por localización)",
+    "Tejidos blandos y estructuras articulares (cartílago articular subastragalino y de Lisfranc; bursas retrocalcánea y subcutánea; neuroma de Morton por espacio intermetatarsal; derrame articular; sinovial)",
+  ],
+
+  pulgar: [
+    "Ligamento colateral ulnar LCU (fascículo propio y accesorio: continuidad, señal, lesión de Stener, clasificación)",
+    "Ligamento colateral radial LCR (continuidad, señal)",
+    "Placa volar (integridad, señal, arrancamiento)",
+    "Tendones (extensor largo del pulgar, extensor corto del pulgar, abductor largo, flexor largo del pulgar: continuidad, señal, trayecto)",
+    "Músculos tenares (abductor corto, oponente, flexor corto: señal, morfología)",
+    "Estructuras óseas (metacarpiano I: cabeza, señal; falange proximal: base, señal; falange distal si aplica; sesamoideos: morfología, señal)",
+    "Tejidos blandos y estructuras articulares (cartílago articular metacarpofalángico e interfalángico; derrame articular; sinovial; partes blandas periarticulares)",
+  ],
+
+  atm: [
+    "Disco articular (posición en boca cerrada y abierta si hay secuencias dinámicas: reducción, no reducción; morfología: bicóncava normal, deformada; señal)",
+    "Zona bilaminar y tejido retrodiscal (señal, engrosamiento, reabsorción)",
+    "Ligamentos (cápsula articular, ligamento discal medial y lateral, ligamento temporomandibular)",
+    "Músculo pterigoideo lateral (cabeza superior e inferior: inserción en disco, señal, morfología)",
+    "Resto de músculos masticadores (pterigoideo medial, masetero, temporal: señal, simetría, volumen)",
+    "Cóndilo mandibular (morfología: convexo normal, aplanado, erosionado, osteofítico; señal medular; contorno cortical; remodelación)",
+    "Eminencia articular y fosa mandibular del temporal (morfología, pendiente, contorno óseo)",
+    "Tejidos blandos y estructuras articulares (compartimentos articulares superior e inferior: derrame, efusión; espacio articular; sinovial; ganglios linfáticos parotídeos si son relevantes)",
+  ],
+};
+
+export const MODALIDADES = {
+  RM: {
+    nombre: "Resonancia Magnética",
+    abreviatura: "RM",
+    secuencias_tipicas: "T1, T2, DP, STIR, T2 Fat Sat, T1 con contraste si aplica",
+    terminos_señal: "hipointenso, isointenso, hiperintenso, heterogéneo",
+    notas: "Describir señal en las secuencias relevantes. Mencionar si hay contraste y en qué estructuras hay realce.",
+  },
+  US: {
+    nombre: "Ultrasonido",
+    abreviatura: "US",
+    secuencias_tipicas: "escala de grises, Doppler color, Doppler poder",
+    terminos_señal: "hiperecogénico, hipoecogénico, anecoico, heterogéneo, con sombra acústica",
+    notas: "Incluir mediciones en milímetros cuando sean relevantes clínicamente. Mencionar vascularidad con Doppler.",
+  },
+  TC: {
+    nombre: "Tomografía Computada",
+    abreviatura: "TC",
+    secuencias_tipicas: "ventana ósea, partes blandas, reconstrucciones multiplanares",
+    terminos_señal: "hipodenso, isodenso, hiperdenso, con realce si hay contraste",
+    notas: "Priorizar descripción ósea detallada. Incluir mediciones de lesiones.",
+  },
+  RX: {
+    nombre: "Radiografía",
+    abreviatura: "RX",
+    secuencias_tipicas: "proyecciones AP, lateral, oblicua según región",
+    terminos_señal: "radiolúcido, radioopaco, densidad de partes blandas, densidad ósea",
+    notas: "Describir calidad técnica, proyecciones incluidas. Evaluar alineación, densidad ósea, espacios articulares.",
+  },
+};
