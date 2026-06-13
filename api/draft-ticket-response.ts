@@ -46,9 +46,8 @@ export default async function handler(request: Request): Promise<Response> {
 
     // 3. Llamar a messages.create con el contenido del ticket
     const message = await client.messages.create({
-      model: "claude-opus-4-8",
+      model: "claude-sonnet-4-6",
       max_tokens: 1024,
-      thinking: { type: "adaptive" },
       messages: [
         {
           role: "user",
