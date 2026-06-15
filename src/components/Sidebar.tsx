@@ -1,5 +1,6 @@
 import {
   Activity,
+  BarChart2,
   BookOpen,
   ChevronLeft,
   ChevronRight,
@@ -19,6 +20,7 @@ const navItems = [
   { id: "cases" as Page, label: "Casos Clínicos", icon: BookOpen, sub: "Aprendizaje aplicado" },
   { id: "support" as Page, label: "Soporte Técnico", icon: LifeBuoy, sub: "Tickets · IA" },
   { id: "radreport" as Page, label: "RadReport Pro", icon: FileText, sub: "Generar · Validar · Dx" },
+  { id: "compare" as Page, label: "Comparar modelos", icon: BarChart2, sub: "Haiku · Sonnet · Opus" },
 ];
 
 interface Props {

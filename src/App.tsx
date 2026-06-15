@@ -9,8 +9,9 @@ import PagePathology from "./pages/PagePathology";
 import PageCases from "./pages/PageCases";
 import PageSupport from "./pages/PageSupport";
 import PageRadReport from "./pages/PageRadReport";
+import PageModelCompare from "./pages/PageModelCompare";
 
-export type Page = "home" | "modalities" | "anatomy" | "pathology" | "cases" | "support" | "radreport";
+export type Page = "home" | "modalities" | "anatomy" | "pathology" | "cases" | "support" | "radreport" | "compare";
 
 function App() {
   const [page, setPage] = useState<Page>("home");
@@ -64,6 +65,7 @@ function App() {
           {page === "cases" && <PageCases />}
           {page === "support" && <PageSupport />}
           {page === "radreport" && <PageRadReport />}
+          {page === "compare" && <PageModelCompare />}
         </main>
       </div>
       <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
