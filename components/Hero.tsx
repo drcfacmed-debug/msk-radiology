@@ -35,7 +35,7 @@ export default function Hero() {
               <strong style={{ color: C.t1 }}>inteligencia artificial aplicada a la imagen MSK</strong>.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-              <a href="#educacion" style={{ background: C.or, color: '#fff', border: 'none', padding: '14px 28px', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-block' }}>
+              <a href="#educacion" style={{ background: C.or, color: '#fff', border: 'none', padding: '14px 28px', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none', display: 'inline-block', boxShadow: '0 10px 30px rgba(224,104,48,.24)', transition: 'transform .18s ease, box-shadow .18s ease' }}>
                 Ver programa →
               </a>
               <a href="#casos" style={{ background: 'transparent', color: C.t1, border: `1.5px solid ${C.br}`, padding: '14px 28px', borderRadius: 8, fontWeight: 500, fontSize: 15, textDecoration: 'none', display: 'inline-block' }}>
